@@ -1,17 +1,3 @@
--- insert into `TB_CHARACTER_MAIN` (`character_id`, `character_nm`, `character_type`)
--- values ('chrid001', '권용필', '부장');
---
--- insert into `TB_EPISODE_MAIN` (`episode_id`, `episode_title`)
--- values ('epsd_id001', 'Episode 1. 돌아온 점심시간');
---
--- insert into `TB_EPISODE_REWARD` (`reward_id`, `reward_nm`)
--- values ('rwd_id001', '되묻기');
---
--- insert into `TB_CHARACTER_INFO` (`info_id`, `info_category_nm`)
--- values ('info_id001', '좋아하는것');
---
--- insert into `TB_CHARACTER_INFO_DETAIL` (`info_detail_id`, `info_detail_nm`)
--- values ('detail_id001', '한식');
 
 -- TB_CHARACTER_MAIN
 INSERT INTO TB_CHARACTER_MAIN (character_id, character_nm, character_type)
@@ -56,6 +42,8 @@ VALUES ('INFO003', 'CH003', '취미');
 -- TB_CHARACTER_INFO_DETAIL
 INSERT INTO TB_CHARACTER_INFO_DETAIL (info_detail_id, info_id, info_detail_nm)
 VALUES ('DETAIL001', 'INFO001', '엄격함');
+INSERT INTO TB_CHARACTER_INFO_DETAIL (info_detail_id, info_id, info_detail_nm)
+VALUES ('DETAIL004', 'INFO001', '근엄함');
 INSERT INTO TB_CHARACTER_INFO_DETAIL (info_detail_id, info_id, info_detail_nm)
 VALUES ('DETAIL002', 'INFO002', '골프');
 INSERT INTO TB_CHARACTER_INFO_DETAIL (info_detail_id, info_id, info_detail_nm)

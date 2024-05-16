@@ -37,7 +37,7 @@ class PracticeControllerTest {
                 new CharacterMain("CH001", "김부장", "부장"),
                 new CharacterMain("CH002", "박대리", "직속후배")
         );
-        given(practiceService.getAllCharacters()).willReturn(characters);
+
 
         // when & then
         mockMvc.perform(get("/practice/characters"))

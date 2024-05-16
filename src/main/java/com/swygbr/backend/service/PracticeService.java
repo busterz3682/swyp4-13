@@ -22,33 +22,29 @@ public class PracticeService {
     private EpisodeRewardRepository episodeRewardRepository;
 
     // 캐릭터 관련 로직
-    public List<CharacterMain> getAllCharacters() {
+    public List<CharacterMain> getCharacterList() {
         return characterMainRepository.findAll();
     }
-
     public CharacterMain getCharacterById(String characterId) {
         return characterMainRepository.findById(characterId).orElse(null);
     }
-
     public List<CharacterInfo> getCharacterInfos(String characterId) {
         return characterInfoRepository.findByCharacterId(characterId);
+    }
+    public List<Object[]> getCharacterKeywords(String characterId) {
+        return characterInfoRepository.findCharacterInfoWithDetailsByCharacterId(characterId);
     }
 
     // 에피소드 관련 로직
     public List<EpisodeMain> getAllEpisodes() {
         return episodeMainRepository.findAll();
     }
-
     public EpisodeMain getEpisodeById(String episodeId) {
         return episodeMainRepository.findById(new EpisodeMainPk(episodeId, "CH001")).orElse(null); // 예시: 첫 번째 캐릭터의 에피소드로 조회
     }
-
-    public List<EpisodeDialog> getEpisodeDialogs(String episodeId) {
-        return episodeDialogRepository.findByEpisodeId(episodeId);
-    }
-
-    public List<EpisodeReward> getEpisodeRewards(String episodeId) {
-        return episodeRewardRepository.findByEpisodeId(episodeId);
+    public List<EpisodeMain> getEpisodesByCharacterId(String characterId) {
+        return episodeMainRepository.findByCharacterId(characterId);
     }
 
 }
+
