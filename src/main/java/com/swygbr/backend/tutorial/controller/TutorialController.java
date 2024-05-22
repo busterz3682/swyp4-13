@@ -1,6 +1,5 @@
 package com.swygbr.backend.tutorial.controller;
 
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +13,8 @@ import com.swygbr.backend.tutorial.dto.RequestTutorialChoiceDto;
 import com.swygbr.backend.tutorial.dto.RequestTutorialInputDto;
 import com.swygbr.backend.tutorial.dto.ResponseTutorialChoiceDto;
 import com.swygbr.backend.tutorial.service.TutorialService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/tutorial")
