@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -43,7 +44,7 @@ public class PracticeService {
     public EpisodeMain getEpisodeById(String episodeId) {
         return episodeMainRepository.findByEpisodeId(episodeId).orElse(null);
     }
-    public List<EpisodeMain> getEpisodesByCharacterId(String characterId, String userId) {
+    public List<EpisodeMain> getEpisodesByCharacterId(String characterId, Long userId) {
         return episodeMainRepository.findByCharacterIdAndUserId(characterId, userId);
     }
 
@@ -54,7 +55,6 @@ public class PracticeService {
     public List<EpisodeDialog> findChildrenByParentDialogId(String chatId) {
         return episodeDialogRepository.findChildrenByParentDialogId(chatId);
     }
-
 
 }
 

@@ -8,11 +8,11 @@ VALUES ('CH003', '최사원', '동기');
 
 -- TB_EPISODE_MAIN
 INSERT INTO TB_EPISODE_MAIN (episode_id, character_id, user_id, episode_title, episode_complete_yn)
-VALUES ('EP001', 'CH001', 'USER001', '첫 출근', 'N');
+VALUES ('EP001', 'CH001', 1, '첫 출근', 'N');
 INSERT INTO TB_EPISODE_MAIN (episode_id, character_id, user_id, episode_title, episode_complete_yn)
-VALUES ('EP002', 'CH001', 'USER001', '점심 메뉴 고르기', 'N');
+VALUES ('EP002', 'CH001', 1, '점심 메뉴 고르기', 'N');
 INSERT INTO TB_EPISODE_MAIN (episode_id, character_id, user_id, episode_title, episode_complete_yn)
-VALUES ('EP003', 'CH001', 'USER001', '퇴근 후 한 잔', 'N');
+VALUES ('EP003', 'CH001', 1, '퇴근 후 한 잔', 'N');
 
 -- TB_EPISODE_DIALOG
 INSERT INTO TB_EPISODE_DIALOG (dialog_id, episode_id, character_id, parent_dialog_id, left_right, user_choose, dialog_detail, correct_answer_yn)
