@@ -50,8 +50,8 @@ VALUES ('DETAIL003', 'INFO002', '골프');
 INSERT INTO TB_CHARACTER_INFO_DETAIL (info_detail_id, info_id, info_detail_nm)
 VALUES ('DETAIL004', 'INFO003', '등산');
 
-insert    into Users (email, name)
-values    ('test@gmail.com', 'myname');
+insert    into Users (id, email, name)
+values    (1, 'test@gmail.com', 'myname');
 
 insert    into UserCard (picture, title, content)
 values    ('http://example.com/picture.png', '리액션봇', '상대방 말에 공감만 해주다가 정작 내 이야기는 못하고 끝나버리죠.');
